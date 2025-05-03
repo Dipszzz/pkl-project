@@ -39,9 +39,6 @@ const Beranda = () => {
     bidangUsaha: "",
     modalKerja: "",
     tenagaKerja: "",
-    luasLahan: "",
-    nilaiBangunan: "",
-    nilaiMesin: "",
   });
 
   const handleChange = (e) => {
@@ -85,9 +82,6 @@ const Beranda = () => {
       bidangUsaha: "",
       modalKerja: "",
       tenagaKerja: "",
-      luasLahan: "",
-      nilaiBangunan: "",
-      nilaiMesin: "",
     });
   };
 
@@ -95,20 +89,17 @@ const Beranda = () => {
     if (!validateForm()) return;
 
     const pesan = `Halo LegalKita ID! Saya ingin mendirikan PT dengan detail berikut:
-
-- Nama PT: ${formData.namaPt}
-- Telp/HP PT: ${formData.telpPt}
-- Alamat PT: ${formData.alamatPt}
-- Kode Pos: ${formData.kodePos}
-- Email: ${formData.emailPt}
-- Bidang Usaha: ${formData.bidangUsaha}
-- Modal Kerja 3 Bulan: ${formData.modalKerja}
-- Jumlah Tenaga Kerja: ${formData.tenagaKerja}
-- Luas Lahan Usaha: ${formData.luasLahan}
-- Nilai Bangunan: ${formData.nilaiBangunan}
-- Nilai Mesin/Alat: ${formData.nilaiMesin}
-
-Saya memahami bahwa nama PT harus terdiri dari tiga suku kata dan tidak mengandung angka/simbol.`;
+  
+  - Nama PT: ${formData.namaPt}
+  - Telp/HP PT: ${formData.telpPt}
+  - Alamat PT: ${formData.alamatPt}
+  - Kode Pos: ${formData.kodePos}
+  - Email: ${formData.emailPt}
+  - Bidang Usaha: ${formData.bidangUsaha}
+  - Modal Kerja 3 Bulan: ${formData.modalKerja}
+  - Jumlah Tenaga Kerja: ${formData.tenagaKerja}
+  
+  Saya memahami bahwa nama PT harus terdiri dari tiga suku kata dan tidak mengandung angka/simbol.`;
 
     const whatsappURL = `https://wa.me/6282114034646?text=${encodeURIComponent(
       pesan
@@ -605,7 +596,7 @@ Saya memahami bahwa nama PT harus terdiri dari tiga suku kata dan tidak mengandu
                   key={id}
                   id={id}
                   type={type}
-                  value={formData[id]}
+                  value={formData[id] ?? ""} // ✅ fallback untuk undefined
                   onChange={handleChange}
                   placeholder={placeholder}
                   className="border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -622,11 +613,14 @@ Saya memahami bahwa nama PT harus terdiri dari tiga suku kata dan tidak mengandu
             </button>
 
             <p className="mt-5 text-sm text-gray-700">
-              <strong>Note :</strong> <br />Nama PT harus terdiri dari tiga suku kata.
-              Contoh : PT. Warna Warni Indah, PT. Media Digital Modern, dll.
-              <br />Penggunaan angka, simbol, serta kata "Corporation" tidak
-              diperkenankan. <br /> Mohon untuk mengirimkan foto KTP dan NPWP
-              sebagai bagian dari proses pendaftaran.
+              <strong>Note :</strong> <br />
+              Nama PT harus terdiri dari tiga suku kata. Contoh: PT. Warna Warni
+              Indah, PT. Media Digital Modern, dll.
+              <br />
+              Penggunaan angka, simbol, serta kata "Corporation" tidak
+              diperkenankan. <br />
+              Mohon untuk mengirimkan foto KTP dan NPWP sebagai bagian dari
+              proses pendaftaran.
             </p>
           </div>
         </div>
