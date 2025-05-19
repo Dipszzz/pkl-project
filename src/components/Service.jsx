@@ -162,7 +162,7 @@ const Service = () => {
         </div>
       </section>
 
-      <div className="bg-blue-800 text-white py-10 mt-10">
+      <div className="bg-blue-800 text-white py-10">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-5xl font-serif font-bold">
             JASA PENDIRIAN LEGALITAS PERUSAHAAN

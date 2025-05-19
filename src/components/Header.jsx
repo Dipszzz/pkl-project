@@ -22,7 +22,7 @@ const Header = () => {
               <img
                 className="h-[8vh] md:h-[15vh]"
                 src={LogoFooter}
-                alt="Logo"
+                alt="Legalkita_Logo"
               />
             </Link>
 

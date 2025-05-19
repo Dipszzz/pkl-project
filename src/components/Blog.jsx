@@ -27,11 +27,11 @@ function Blog() {
   }, []);
 
   if (loading) {
-    return <div className="p-8 text-center text-3xl text-blue-800 font-bold">Loading Bro...</div>;
+    return <div className="p-8 text-center text-3xl text-blue-800 font-bold">Loading...</div>;
   }
 
   if (error) {
-    return <div className="p-8 text-center text-3xl text-red-500 font-bold">Lha Ko Error: {error}</div>;
+    return <div className="p-8 text-center text-3xl text-red-500 font-bold">Error: {error}</div>;
   }
 
   return (

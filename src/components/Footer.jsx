@@ -54,7 +54,7 @@ const Footer = () => {
                 <img
                   className="size-[33vh] py-auto object-contain"
                   src={LogoFooter}
-                  alt="LegalKita Logo"
+                  alt="LegalKita_Logo"
                 />
               </a>
             </div>

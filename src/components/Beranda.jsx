@@ -112,38 +112,40 @@ const Beranda = () => {
   return (
     <>
       {/* Beranda */}
-      <div
-        data-aos="fade-up"
-        className="flex flex-col md:flex-row items-center bg-gray-300 px-4 py-10"
-      >
+      <div className="overflow-x-hidden">
         <div
-          className="w-full md:w-1/2 flex flex-col items-center text-center"
-          data-aos="fade-right"
+          data-aos="fade-up"
+          className="flex flex-col md:flex-row items-center bg-gray-300 px-4 py-10 scroll-mt-24"
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-blue-950 font-serif">
-            LEGALKITA ID
-          </h1>
-          <h2 className="text-xl md:text-2xl py-3.5">Melayani Dengan Hati</h2>
-          <h3 className="text-base md:text-lg">
-            Wujudkan bisnis impian anda dengan LegalKita.Id
-          </h3>
-          <div className="py-6 md:py-10" data-aos="zoom-in">
-            <Link to="/layanan">
-              <button className="bg-blue-950 text-white hover:bg-blue-800 px-6 py-2 rounded-lg font-semibold cursor-pointer delay-75 transition-transform transform hover:scale-105 hover:shadow-lg duration-300">
-                Tentang Layanan Kami
-              </button>
-            </Link>
+          <div
+            className="w-full md:w-1/2 flex flex-col items-center text-center"
+            data-aos="fade-right"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-blue-950 font-serif">
+              LEGALKITA ID
+            </h1>
+            <h2 className="text-xl md:text-2xl py-3.5">Melayani Dengan Hati</h2>
+            <h3 className="text-base md:text-lg">
+              Wujudkan bisnis impian anda dengan LegalKita.Id
+            </h3>
+            <div className="py-6 md:py-10" data-aos="zoom-in">
+              <Link to="/layanan">
+                <button className="bg-blue-950 text-white hover:bg-blue-800 px-6 py-2 rounded-lg font-semibold cursor-pointer delay-75 transition-transform transform hover:scale-105 hover:shadow-lg duration-300">
+                  Tentang Layanan Kami
+                </button>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div
-          className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-10 flex justify-center"
-          data-aos="fade-left"
-        >
-          <img
-            src={Gedung}
-            alt="Lha Ko Ngilang Gambarnya"
-            className="w-full h-auto max-w-xs md:max-w-md rounded-lg shadow-md"
-          />
+          <div
+            className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-10 flex justify-center overflow-hidden"
+            data-aos="fade-left"
+          >
+            <img
+              src={Gedung}
+              alt="Pict_Gedung"
+              className="w-full h-auto max-w-xs md:max-w-md rounded-lg shadow-md"
+            />
+          </div>
         </div>
       </div>
 
@@ -208,11 +210,7 @@ const Beranda = () => {
                   className="p-6 bg-blue-800 text-white hover:bg-blue-950 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg duration-300"
                   data-aos="flip-left"
                 >
-                  <img
-                    src={item.img}
-                    alt="nungguin ya"
-                    className="size-[5rem]"
-                  />
+                  <img src={item.img} alt="pict_logo" className="size-[5rem]" />
                   <h3 className="text-xl font-semibold font-inter mb-2 mt-1">
                     {item.title}
                   </h3>
@@ -351,7 +349,10 @@ const Beranda = () => {
           </div>
           <div className="px-7">
             {/* Baris Pertama */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-5">
+            <h1 className="text-3xl md:text-4xl font-serif text-center text-blue-950 pt-5">
+              Klien Pendirian PT
+            </h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   img: "https://cdn-icons-png.flaticon.com/128/2504/2504717.png",
@@ -376,11 +377,7 @@ const Beranda = () => {
                   key={index}
                   className="p-6 bg-gray-300 text-black rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer"
                 >
-                  <img
-                    src={item.img}
-                    alt="nungguin ya"
-                    className="size-[5rem]"
-                  />
+                  <img src={item.img} alt="" className="size-[5rem]" />
                   <h3 className="text-xl text-blue-950 font-semibold font-inter mt-1">
                     {item.title}
                   </h3>
@@ -393,7 +390,10 @@ const Beranda = () => {
             </div>
 
             {/* Baris Kedua */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-10">
+            <h1 className="text-3xl md:text-4xl font-serif text-center text-blue-950 pt-10">
+              Klien Pendirian CV
+            </h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[...Array(3)].map((_, index) => (
                 <div
                   key={index}
@@ -407,7 +407,7 @@ const Beranda = () => {
                         "https://cdn-icons-png.flaticon.com/128/8765/8765344.png",
                       ][index]
                     }
-                    alt="nungguin ya"
+                    alt=""
                     className="size-[5rem]"
                   />
                   <h3 className="text-xl text-blue-950 font-semibold font-inter mt-1">
@@ -430,6 +430,9 @@ const Beranda = () => {
             </div>
 
             {/* Baris Ketiga */}
+            <h1 className="text-3xl md:text-4xl font-serif text-center text-blue-950 pt-10">
+              Klien Perizinan Usaha
+            </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[...Array(3)].map((_, index) => (
                 <div
@@ -444,7 +447,7 @@ const Beranda = () => {
                         "https://cdn-icons-png.flaticon.com/128/8765/8765344.png",
                       ][index]
                     }
-                    alt="nungguin ya"
+                    alt=""
                     className="size-[5rem]"
                   />
                   <h3 className="text-xl text-blue-950 font-semibold font-inter mt-1">
@@ -493,7 +496,7 @@ const Beranda = () => {
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/2345/2345470.png"
-                  alt="nungguin ya"
+                  alt=""
                   className="size-[5rem]"
                 />
                 <h3 className="text-xl font-semibold font-inter mb-2 mt-1">
@@ -513,7 +516,7 @@ const Beranda = () => {
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/11511/11511383.png"
-                  alt="nungguin ya"
+                  alt=""
                   className="size-[5rem]"
                 />
                 <h3 className="text-xl font-semibold font-inter mb-2 mt-1">
@@ -533,7 +536,7 @@ const Beranda = () => {
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/10165/10165363.png"
-                  alt="nungguin ya"
+                  alt=""
                   className="size-[5rem]"
                 />
                 <h3 className="text-xl font-semibold font-inter mb-2 mt-1">

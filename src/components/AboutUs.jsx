@@ -21,7 +21,7 @@ const AboutUs = () => {
         {/* Background Image */}
         <img
           src={Gedung}
-          alt="Lha Ko Ga Muncul"
+          alt="Pict_Gedung"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-0"></div>
